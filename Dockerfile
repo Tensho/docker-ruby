@@ -8,6 +8,7 @@ ENV RUBY_VERSION 2.2.3
 
 # Install ruby
 RUN rbenv install $RUBY_VERSION
+RUN rbenv global $RUBY_VERSION
 
 # Disable gems documentation generation
 RUN echo 'gem: --no-document' >> "/.gemrc"
